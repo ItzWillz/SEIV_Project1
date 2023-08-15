@@ -1,0 +1,34 @@
+:root{
+    --sswidth: 580px;
+    --ssheight: 290px;
+}
+
+.half-circle-vertical-right {
+  background-color: grey;
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  vertical-align: top;
+  overflow: hidden;
+  font-size: 15px;
+  width: var(--ssheight);
+  height: var(--sswidth);
+  line-height: var(--sswidth);
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  }
+
+  .half-circle-vertical-left {
+    background-color: grey;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 15px;
+    width: var(--ssheight);
+    height: var(--sswidth);
+    line-height: var(--sswidth);
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    }
