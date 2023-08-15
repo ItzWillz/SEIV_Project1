@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 
 <style>
+
+body{
+  background-color: #fdfbed;
+}
+
+
   /* menu bar style */
   ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #ca3f10;
 }
 li {
   float: left;
@@ -56,7 +63,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 /* Divider */
 hr.solid {
-  border-top: 3px solid #333;
+  border-top: 3px solid #ca3f10;
   border-radius: 5px;
   margin: 20%;
 }
@@ -65,10 +72,10 @@ hr.solid {
 
 .homeHeader {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 80%;
+  left: 40%;
   color: white;
-  background-color: #333;
+  background-color: #3333339d;
   transform: translate(-50%, -50%);
 }
 
@@ -98,13 +105,13 @@ img {
   place-content: center;
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   --position: 50%;
 }
 
 .image-container {
   max-width: 800px;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   aspect-ratio: 1/1;
 }
 
@@ -137,17 +144,17 @@ img {
   outline-offset: 3px;
 }
 
-.slider-line {
+/* .slider-line {
   position: absolute;
   inset: 0;
   width: .2rem;
   height: 100%;
   background-color: #fff;
-  /* z-index: 10; */
+  /* z-index: 10; 
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
-}
+} */
 
 .slider-button {
   position: absolute;
@@ -165,6 +172,28 @@ img {
   box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
 /* Before/after end */
+
+h1{
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+
+.cyberButton, .seButton, .gamingButton{
+
+height: 100px;
+width: 100px;
+margin-left: 25px;
+margin-right:25px;
+display: inline-block;
+text-align: center;
+
+background-color: #333;
+}
 
 </style>
 
@@ -212,7 +241,7 @@ img {
         aria-label="Percentage of before photo shown"
         class="slider"
       />
-      <div class="slider-line" aria-hidden="true"></div>
+      <!-- <div class="slider-line" aria-hidden="true"></div> -->
       <div class="slider-button" aria-hidden="true">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -287,12 +316,13 @@ img {
     <p>Education blurb</p>
 
 
-    <h2>Cyber</h2>
+    <center class="buttons">
+    <a class="cyberButton" href="#">Cyber</a>
 
-    <h2>Software Engineering</h2>
+    <a class="seButton">Software Engineering</a>
 
-    <h2>Gaming and Animation</h2>
-
+    <a class="gamingButton">Gaming and Animation</a>
+    </center>
     <hr class="solid">
 
     <h1>Explore Careers</h1>
