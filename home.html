@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<style>
+  /* menu bar style */
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #111;
+}
+/* menu bar style */
+
+/* Divider */
+hr.solid {
+  border-top: 3px solid #333;
+  border-radius: 5px;
+  margin: 20%;
+}
+/* Divider */
+
+
+.homeHeader {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  color: white;
+  background-color: #333;
+  transform: translate(-50%, -50%);
+}
+
+
+/* before/after start */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+  main { 
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+} 
+
+.container {
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  --position: 50%;
+}
+
+.image-container {
+  max-width: 800px;
+  max-height: 90vh;
+  aspect-ratio: 1/1;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+  filter: grayscale(100%)
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for Firefox */
+  width: 100%;
+  height: 100%;
+}
+
+.slider:focus-visible ~ .slider-button {
+  outline: 5px solid black;
+  outline-offset: 3px;
+}
+
+.slider-line {
+  position: absolute;
+  inset: 0;
+  width: .2rem;
+  height: 100%;
+  background-color: #fff;
+  /* z-index: 10; */
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.slider-button {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  padding: .5rem;
+  border-radius: 100vw;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* z-index: 100; */
+  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+/* Before/after end */
+
+</style>
+
+
+
+<html>
+
+  <body>
+    
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="news.asp">News</a></li>
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >Contact</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+     
+      <li><a href="about.asp">About</a></li>
+    </ul>
+
+<main>
+    <div class="container">
+      <div class="image-container">
+        <img
+          class="image-before slider-image"
+         src="retro_computers.jpg"
+          alt="current"
+        />
+        <img
+          class="image-after slider-image"
+          src="new_computer_2.jpg"
+          alt="retro"
+        />
+        <h1 class="homeHeader">What is does it mean to be a Computer Scientist?</h1>
+      </div>
+      <!-- animation -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Percentage of before photo shown"
+        class="slider"
+      />
+      <div class="slider-line" aria-hidden="true"></div>
+      <div class="slider-button" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="216"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="96"
+            y1="128"
+            x2="16"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="48 160 16 128 48 96"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+          <line
+            x1="160"
+            y1="128"
+            x2="240"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="208 96 240 128 208 160"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+        </svg>
+      </div>
+    </div>
+  </main>
+ 
+
+
+    
+    <p class="homeBlurb">Do a lot of CS stuff</p>
+
+    <hr class="solid">
+
+    <h1>Discover your path in Computer Science</h1>
+    <p>Education blurb</p>
+
+
+    <h2>Cyber</h2>
+
+    <h2>Software Engineering</h2>
+
+    <h2>Gaming and Animation</h2>
+
+    <hr class="solid">
+
+    <h1>Explore Careers</h1>
+    <p>Career blurb</p>
+
+    <hr class="solid">
+
+    <h1>Events</h1>
+    <p>Event blurb</p>
+
+    <div class="footer">
+
+    </div>
+
+  </body>
+</html>
+
+<script>
+  const container = 
+  document.querySelector('.container');
+document.querySelector('.slider').addEventListener('input', (e) => {
+
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
+</script>
