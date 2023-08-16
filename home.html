@@ -177,22 +177,55 @@ h1{
   text-align: center;
 }
 
-.buttons{
-  display: flex;
-  width: 50%;
-  margin: auto;
+
+
+
+.btn-group button {
+position: relative;
+text-align: center;
+background-size: 152% auto ;
+background-repeat: no-repeat;
+  /* background-color: #04AA6D; Green background */
+  border: none;
+  color: white; /* White text */
+  padding: 80px 80px; /* Some padding */
+  margin: 20px;
+  cursor: pointer; /* Pointer/hand icon */
+  display: inline-block; /* Float the buttons side by side */
+}
+.cyber_btn{
+    background-image: url('cyber.jpg');
 }
 
-.cyberButton, .seButton, .gamingButton{
+.se_btn{
+    background-image: url('se.jpg');
+}
 
-height: 100px;
-width: 100px;
-margin-left: 25px;
-margin-right:25px;
-display: inline-block;
-text-align: center;
+.gaming_btn{
+    background-image: url('gaming.jpg');
+}
 
-background-color: #333;
+h2{
+ position: absolute;
+  bottom: 0px;
+  left: 16px;
+/* color:black; */
+
+
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: inline-block;
+}
+
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  /* background-color: #3e8e41; */
+  backdrop-filter: blur(5px);
 }
 
 </style>
@@ -315,14 +348,14 @@ background-color: #333;
     <h1>Discover your path in Computer Science</h1>
     <p>Education blurb</p>
 
-
-    <center class="buttons">
-    <a class="cyberButton" href="#">Cyber</a>
-
-    <a class="seButton">Software Engineering</a>
-
-    <a class="gamingButton">Gaming and Animation</a>
-    </center>
+<center>
+    <div class="btn-group">
+      <button class="cyber_btn" onclick="location.href = 'education_se_page.html';
+      "><h2>Cyber</h2></button>
+      <button class="se_btn"><h2>Software Engineering</h2></button>
+      <button class="gaming_btn"><h2>Gaming & Animation</h2></button>
+    </div>
+  </center>
     <hr class="solid">
 
     <h1>Explore Careers</h1>
