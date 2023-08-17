@@ -22,14 +22,23 @@ body{
   
   }
   footer{
-    position: fixed;
+  position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -50%;
   width: 100%;
   background-color: #ca3f10;
   color: white;
   text-align: center;
   }
+
+  .column img {
+    border-radius: 50%;
+    max-width: 50%;
+    width: 500px;
+    max-height: 50%;
+    margin-top: 10%;
+  }
+
   .footerP{
     color: #f9f9f9;
     text-align: center;
