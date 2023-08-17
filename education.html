@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<style>
+
+
+</style>
+
+
+
+<html>
+
+<header>
+  
+  <link rel="stylesheet" href="style.css"/>
+
+</header>
+
+  <body>
+    
+    <ul>
+      <li><a href="news.asp">Events</a></li>
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >About</a>
+        <div class="dropdown-content">
+          <a href="#">About the Creators</a>
+        </div>
+      </li>
+      
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >Careers</a>
+        <div class="dropdown-content">
+          <a href="#">Job Types</a>
+        </div>
+      </li>
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >Education</a>
+        <div class="dropdown-content">
+          <a href="#">Cyber</a>
+          <a href="#">Software Engineering</a>
+          <a href="#">Gaming and Animation</a>
+          <a href="#">Resources</a>
+        </div>
+      </li>
+      
+      <li><a href="about.asp">Home</a></li>
+    </ul>
+    
+<main>
+    <div class="container">
+      <div class="image-container">
+        <img
+          class="image-before slider-image"
+         src="retro_computers.jpg"
+          alt="current"
+        />
+        <img
+          class="image-after slider-image"
+          src="new_computer_2.jpg"
+          alt="retro"
+        />
+        <h1 class="homeHeader">What is does it mean to be a Computer Scientist?</h1>
+      </div>
+      <!-- animation -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Percentage of before photo shown"
+        class="slider"
+      />
+      <!-- <div class="slider-line" aria-hidden="true"></div> -->
+      <div class="slider-button" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="216"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="96"
+            y1="128"
+            x2="16"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="48 160 16 128 48 96"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+          <line
+            x1="160"
+            y1="128"
+            x2="240"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="208 96 240 128 208 160"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+        </svg>
+      </div>
+    </div>
+  </main>
+ 
+  <div class="education">
+  <a class="hidden">Hidden</a>
+    
+    <p class="homeBlurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt
+       ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+       commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr class="solid">
+
+  </div>
+
+    <h1>Discover your path in Computer Science</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt
+       ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+       commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        Excepteur sint occaecat cupidatat non proident, sunt in
+       culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+
+    <hr class="solidTrio">
+ <div class="trio">
+    <div class="row">
+      <div class="columnTrio" >
+        <div class="card">
+            <h3>Cyber</h3>
+            <p>Click the link below to see more about careers and job types</p>
+            <a style="text-decoration: none;"href="#">Some text</a>
+          </div>
+          </div>
+      <div class="columnTrio">
+        <div class="card">
+          <h3>Software Engineering</h3>
+          <p>Click the link below to see more about careers and job types</p>
+          <a style="text-decoration: none;"href="#">Some text</a>
+        </div>
+      </div>
+      <div class="columnTrio" >
+        <div class="card">
+            <h3>Gaming and Animation</h3>
+            <p>Click the link below to see more about careers and job types</p>
+            <a style="text-decoration: none;"href="#">Some text</a>
+          </div>
+          </div>
+      </div>
+    </div>
+
+      
+
+
+      
+    
+
+    <div class="footer">
+
+    </div>
+
+  </body>
+</html>
+
+<script>
+  const container = 
+  document.querySelector('.container');
+document.querySelector('.slider').addEventListener('input', (e) => {
+
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
+
+</script>
