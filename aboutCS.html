@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Computer Science Degree</title>
+    <style>
+        body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBED;
+}
+
+header, nav, main, footer {
+    margin: 20px;
+    /* #3C7F72 (Blue)
+    #FFFBED (Off white)
+    #992800(Dark red)
+    #FFAF00(Yellow)
+    #D2400B (orange red) ; */
+}
+nav{
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #992800;
+    padding:20px;
+    margin: 0;
+}
+.nav-item{
+    padding:20px;
+    margin: 0;
+    color: black;
+}
+header {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+#overview{
+    position: relative;
+    text-align: center;
+    color:white;
+}
+.centered1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+.importance-item{
+    width: 10px;
+    margin: 10px;
+    background-color:#D2400B;
+}
+.item1 { grid-area: header; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+.item2 { 
+    grid-area: menu; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+.item3 { 
+    grid-area: main; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+.item4 { grid-area: 
+    right; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+.item5 { grid-area: footer; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header menu '
+    'main right '
+    ' footer .';
+  gap: 30px;
+  padding: 10px;
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-areas:
+      'header menu '
+      'main right '
+      ' footer .';
+    gap: 30px;
+    padding: 10px;
+  }
+.centered2{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Computer Science Degree</h1>
+    </header>
+    <nav>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#importance" class="nav-item">Importance</a></li>
+            <li><a href="#imp-section" class="nav-item">Career Opportunities</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="overview">
+            <img src="cswall.jpeg" alt="" style="width: 100%;">
+            <h2 class="centered1">Computer Science</h2>
+            <p>A computer science degree is an educational program that focuses on the study of computers and computational systems. It covers a wide range of topics...</p>
+        </section>
+        <section id="importance">
+            <h2>Importance of a Computer Science Degree</h2>
+            <p>Computer science plays a vital role in today's technology-driven world. Here are some reasons why a computer science degree is important:</p>
+            <div class="grid-container">
+                <div class="item1"><strong>High Demand:</strong> In today's digital age, there is a high demand for skilled computer scientists who can develop software, analyze data, and solve complex problems.</div>
+                <div class="item2"><strong>Problem-Solving:</strong> The degree equips students with strong analytical and problem-solving skills, which are valuable in almost every profession</div>
+                <div class="item3"><strong>Innovation:</strong> Computer science drives innovation in various fields, from healthcare to entertainment, by creating new technologies and solutions.</div>  
+                <div class="item4"><strong>Versatile Career Options:</strong> Graduates can pursue careers in software development, artificial intelligence, cybersecurity, data science, and more.</div>
+                <div class="item5"><strong>Impact on Society:</strong> Computer science advancements have transformed how we communicate, work, and live, making it crucial for societal progress.</div>
+              </div>
+        </section>
+        <section id="career">
+            <img src="career.png" alt="" width="100%">
+            <h2 class="centered2">Career Opportunities</h2>
+            <p>With a computer science degree, graduates can explore a wide range of career opportunities:</p>
+            <div class="grid-container2" id="imp-section">
+                <div class="item1">Software Developer</div>
+                <div class="item2">Data Scientist</div>
+                <div class="item3">AI/Machine Learning Engineer</div>  
+                <div class="item4">Cybersecurity Analyst</div>
+                <div class="item5">Web Developer</div>
+              </div>
+        </section>
+    </main>
+</body>
+</html>
