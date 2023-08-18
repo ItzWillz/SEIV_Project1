@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<style>
+
+
+</style>
+
+
+
+<html>
+
+<header>
+  
+  <link rel="stylesheet" href="style.css"/>
+
+</header>
+
+  <body>
+    
+    <ul>
+      <li><a href="news.asp">Events</a></li>
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >About</a>
+        <div class="dropdown-content">
+          <a href="#">About the Creators</a>
+        </div>
+      </li>
+      
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >Careers</a>
+        <div class="dropdown-content">
+          <a href="#">Job Types</a>
+        </div>
+      </li>
+      <li class="dropdown"><a class="dropbtn" href="contact.asp" >Education</a>
+        <div class="dropdown-content">
+          <a href="#">Cyber</a>
+          <a href="#">Software Engineering</a>
+          <a href="#">Gaming and Animation</a>
+          <a href="#">Resources</a>
+        </div>
+      </li>
+      
+      <li><a href="about.asp">Home</a></li>
+    </ul>
+    
+<main>
+    <div class="container">
+      <div class="image-container">
+        <!-- <img
+          class="image-before slider-image"
+         src="retro_computers.jpg"
+          alt="current"
+        /> -->
+        <img
+          class="image-after slider-image"
+          src="education.jpg"
+          alt="retro"
+        />
+        <h1 class="homeHeader">Discover your path in Computer Science</h1>
+      </div>
+      <!-- animation -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Percentage of before photo shown"
+        class="slider"
+      />
+      <!-- <div class="slider-line" aria-hidden="true"></div> -->
+      <!-- <div class="slider-button" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <rect width="256" height="256" fill="none"></rect>
+          <line
+            x1="128"
+            y1="40"
+            x2="128"
+            y2="216"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <line
+            x1="96"
+            y1="128"
+            x2="16"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="48 160 16 128 48 96"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+          <line
+            x1="160"
+            y1="128"
+            x2="240"
+            y2="128"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></line>
+          <polyline
+            points="208 96 240 128 208 160"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="16"
+          ></polyline>
+        </svg>
+      </div> -->
+    </div>
+  </main>
+ 
+  <div class="education">
+  <a class="hidden">Hidden</a>
+    
+<h2 style="margin-left: 5%;">What can I do to learn more about Computer Science, <br> and how can I be well prepared to be a CS Major</h2>
+
+    <p class="homeBlurb">The best way to learn more about computer science is to get educated!
+      There are many different paths a person can take as a computer scientist like, cybersecurity, software engineering, and animation. 
+      Knowing how to code is also a big part of being a computer scientist and there are many great reasources to 
+      help prepare you for your educational journey. 
+      Check out the cards below to learn more about each specialty and the Resources link to see resources avaliable to you. 
+    </p>
+
+    <hr class="solid">
+
+  </div>
+
+ <div class="trio">
+    <div class="row">
+      <div class="columnTrio" >
+        <div class="card">
+            <h3>Cyber</h3>
+            <p>Enter the world of network forensics and cloud computing to
+              better defend in a world of ever increasing security.
+              Learn more about what it takes to get into 
+              CyberSecurity.
+              <br>
+              </p>
+            <a style="text-decoration: none; color: #3c7f72;"href="education_cyber_page.html"><strong>Learn More > </strong></a>
+          </div>
+          </div>
+      <div class="columnTrio">
+        <div class="card">
+          <h3>Software Engineering</h3>
+          <p>Code your way to a better future and build the software of tomorrows biggest companies
+            See what it takes to be a Software Engineer
+            <br>
+            <br>
+            </p>
+          <a style="text-decoration:none; color: #3c7f72; "href="education_se_page.html"><strong>Learn More > </strong></a>
+        </div>
+      </div>
+      <div class="columnTrio" >
+        <div class="card">
+            <h3>Gaming and Animation</h3>
+            <p>Become the designer to the next hit game or become your own startup. 
+              With the skills you gain animating you can design the world you wish to be apart of
+              Check out the world of Gaming and Animation</p>
+            <a style="text-decoration: none; color: #3c7f72;"href="education_gaming_page.html"><strong>Learn More > </strong></a>
+          </div>
+          </div>
+      </div>
+    </div>
+
+      
+
+
+      
+    
+
+    <div class="footer">
+
+    </div>
+
+  </body>
+</html>
+
+<script>
+  const container = 
+  document.querySelector('.container');
+document.querySelector('.slider').addEventListener('input', (e) => {
+
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
+
+</script>

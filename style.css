@@ -134,6 +134,14 @@ body{
   }
   /* Divider */
   
+  .solidTrio{
+    border-top: 3px solid #ca3f10;
+    border-radius: 5px;
+    bottom: 20%;
+    position: relative;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+  }
   
   .homeHeader {
     position: absolute;
@@ -451,6 +459,13 @@ body{
     width: 50%;
     padding: 10px;
   }
+  .columnTrio {
+    float: left;
+    width: 33%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+  }
   .row{
     margin-bottom: 5%;
   }
@@ -462,6 +477,16 @@ body{
     clear: both;
   }
   
+  .trio{
+    background-image: url(leftRetroCurve.PNG);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+
+  }
   
   
   /* Style the counter cards */
