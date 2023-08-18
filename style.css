@@ -1,4 +1,39 @@
 
+:root{
+    --sswidth: 580px;
+    --ssheight: 290px;
+}
+
+.half-circle-vertical-right {
+  background-color: grey;
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  vertical-align: top;
+  overflow: hidden;
+  font-size: 15px;
+  width: var(--ssheight);
+  height: var(--sswidth);
+  line-height: var(--sswidth);
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  }
+
+  .half-circle-vertical-left {
+    background-color: grey;
+    display: inline-block;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    font-size: 15px;
+    width: var(--ssheight);
+    height: var(--sswidth);
+    line-height: var(--sswidth);
+    border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+
 body{
     background-color: #fdfbed;
   }
@@ -20,6 +55,28 @@ body{
     margin-top:10px;
     height: 100px;
   
+  }
+  footer{
+  position: absolute;
+  left: 0;
+  bottom: -50%;
+  width: 100%;
+  background-color: #ca3f10;
+  color: white;
+  text-align: center;
+  }
+
+  .column img {
+    border-radius: 50%;
+    max-width: 50%;
+    width: 500px;
+    max-height: 50%;
+    margin-top: 10%;
+  }
+
+  .footerP{
+    color: #f9f9f9;
+    text-align: center;
   }
   li {
     float: right;
