@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script
+  src="https://code.jquery.com/jquery-3.7.0.slim.js"
+  integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c="
+  crossorigin="anonymous"></script>
+      <script>
+        $('#viewMore-button').click(function() {
+            console.log("here")
+    $('.hidden-section').css({
+        'display': 'block',
+    });
+});
+      </script>
+    <style>
+        body{
+            background-color: #FFFBED;
+        }
+        .event1{grid-area:  event1;}
+        .event2{grid-area:  event2;}
+        .event3{grid-area:  event3;}
+        .event4{grid-area:  event4;}
+        .event5{grid-area:  event5;}
+        .event6{grid-area:  event6;}
+        .event7{grid-area:  event7;}
+        .event8{grid-area:  event8;}
+        .intro-text{grid-area: introText;}
+        #introText{
+            font-size: 30px;
+            font-weight: bolder;
+            line-height: 30px;
+            color: #992800;
+        }
+        .grid-container{
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            grid-template-areas: 
+            'event1 introText'
+            '. event2'
+            'event3 .'
+            '. event4'
+            'event5 .'
+            '. event6'
+            'event7 .'
+            '. event8'
+            ;
+            gap: 20px;
+        }
+        .event-title{
+            font-size: 30px; ;
+            font-weight: bolder;
+            color: #992800;
+
+        }
+        .event-date{
+            font-size: 20px; 
+            font-weight:bold;
+            color: #3C7F72;
+        }
+        .event-location{
+            font-size: 20px; 
+            font-weight:bold;
+        }
+        .event-card{
+            background-color: rgba(244, 198, 198, 0.3);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding: 2%;
+            text-align: center;
+        }
+        .event-picture{
+            float: left;
+            width: 400px;
+        }
+        .rsvp-button{
+            font-size:large;
+            font-weight: bold;
+            text-align: center;
+            background-color: #992800;
+            padding: auto;
+            width: 100px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            transition-duration: 0.4s;
+            cursor:pointer;
+        }
+        .rsvp-button:hover{
+            transition: 0.3s;
+            background-color:rgb(60, 58, 58);
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        .hidden-section{
+            display:none;
+        }
+        #viewMore-button{
+            margin-top: 0%;
+            width: 95%;
+            font-size: larger;
+            text-align: center;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor:pointer;
+        }
+       a {
+            color: inherit; 
+            text-decoration: inherit; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Events</h1>
+    <div class="grid-container">
+        <div id="event_1" class="event-card">
+            <img src="event1.png" alt="event1" class="event-picture">
+            <div class="event-text"> 
+                <p class="event-title">Career Fair</p>
+                <p class="event-location"><span class="material-icons">place</span> &nbsp;&nbsp;Adams Recital Hall</p>
+                <p><b>More Info:</b> This a very important event through out the year where different companies like: Paycom, Heartland, Tinker and many others talk to students about their open roles both internships and full time</p>
+                <p class="event-date"><span class="material-icons">event</span> &nbsp;&nbsp;Monday, 10 feb 2001</p>
+                <button class="rsvp-button"><a href="https://www.oc.edu/career-services">RSVP</a>
+                    </button>
+            </div>
+        </div>
+        <div id="intro-text"><span id="introText"> Welcome to the forefront of technology and innovation! Our Computer Science events page is a hub of exploration and discovery, designed for enthusiasts, professionals, and learners alike. <p>Join us in shaping the future.</p></span></div>
+        <div id="event_2" class="event-card"> 
+            <img src="chapel.jpeg" alt="event1" class="event-picture">
+            <div class="event-text"> 
+                <p class="event-title">Math/CS Chapel</p>
+                <p class="event-location"><span class="material-icons">place</span> &nbsp;&nbsp;Prince Engineering Center</p>
+                <p><b>More Info:</b>Every Wednesday of school days, Math and Computer science students gather for praise. Students get a chance to hear testimonies and words of wisdom from their professors</p>
+                <p class="event-date"><span class="material-icons">event</span> &nbsp;&nbsp;Weekly, Wednesday</p>
+            </div>
+        </div>
+        <div id="event_3" class="event-card"> 
+            <img src="bclub.png" alt="event1" class="event-picture">
+            <div class="event-text"> 
+                <p class="event-title">Bit Club</p>
+                <p class="event-location"><span class="material-icons">place</span> &nbsp;&nbsp;Several Locations</p>
+                <p><b>More Info:</b> The BitClub is the computer science department community which focuses on professional development of computer science students. Bit club have several FUN events throught out the year</p>
+                <p class="event-date"><span class="material-icons">event</span> &nbsp;&nbsp;Monday, 10 feb 2001</p>
+                <button class="rsvp-button"><a href="https://ocbitclub.com/">RSVP</a>
+                    </button>
+            </div>
+        </div>
+        <div id="event_4" class="event-card"> 
+            <img src="cyber1.jpg" alt="event1" class="event-picture">
+            <div class="event-text"> 
+                <p class="event-title">Cyber Contest</p>
+                <p class="event-location"><span class="material-icons">place</span> &nbsp;&nbsp;Adams Recital Hall</p>
+                <p><b>More Info:</b> In This event, Computer Science and Cyber Security students, Cyber Eagles, take part in the National Cyber League Competition(NCL) to play hero and defend cyber attacks</p>
+                <p class="event-date"><span class="material-icons">event</span> &nbsp;&nbsp;Monday, 10 feb 2001</p>
+                <button class="rsvp-button"><a href="https://www.oc.edu/student-life/clubs-organizations/cybereagles">RSVP</a>
+                    </button>
+            </div>
+        </div>
+        <div id="event_5" class="event-card"> 
+            <img src="celebration.jpeg" alt="event1" class="event-picture">
+            <div class="event-text"> 
+                <p class="event-title">Celebration Of Excellence</p>
+                <p class="event-location"><span class="material-icons">place</span> &nbsp;&nbsp;Garvey Center</p>
+                <p><b>More Info:</b> In This event, Computer Science students and students from all other majors present about cutting edge projects they have been working on. /p>
+                <p class="event-date"><span class="material-icons">event</span> &nbsp;&nbsp;Monday, 10 feb 2001</p>
+                <button class="rsvp-button"><a href="https://www.oc.edu/excellence">More Info</a>
+                    </button>
+            </div>
+    </div>
+</div>
+<div id ="viewMore-button"> View More...</div>
+</body>
+</html>
